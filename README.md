@@ -1,11 +1,6 @@
 # two_hidden_layer_artificial_neural_networkü
 
-
-`from sklearn.datasets import load_breast_cancer
- from sklearn.model_selection import train_test_split
- from sklearn.preprocessing import StandardScaler
- from sklearn.neural_network import MLPClassifier
- from sklearn.metrics import accuracy_score, recall_score, precision_score `
+![image](https://github.com/salihtekin/two_hidden_layer_artificial_neural_network/assets/63247968/1c09a6d1-06e7-4440-a870-d5aa96b650e8)
 
 	İlk adım olarak kütüphaneler yüklenir. Yukarıdaki kütüphanelerden;
 	Satır1 -  ‘sklearn.datasets’ kütüphanesinden ‘load_breast_cancer’ fonksiyonu ile açık kaynak olan “ Breast Cancer Wisconsin” veri seti yüklenmiştir.
@@ -39,19 +34,16 @@
 	İki gizli katmana ve 100 nörona sahip bir MLP modeli oluşturulmuştur. early_stopping=True ile erken durdurmayı kullanarak, eğitim sırasında doğruluk skorunun artmaya başlaması durumunda eğitim durdurulmaya ayarlanmıştır. Ve daha sonra bu model eğitilmiştir.
 
 # Üç ayrı model kullanılma nedeni;
-Model 1: Daha fazla iterasyon kullanmak.
+**Model 1:** Daha fazla iterasyon kullanmak.
 Bu model, çok katmanlı bir yapay sinir ağı (MLP) oluşturur ve maksimum iterasyon sayısını (max_iter=1000) artırarak daha fazla iterasyon gerçekleştirir. Bu, modelin daha uzun süre eğitilmesini sağlar ve eğitimin istenen sonuca ulaşması ( konverjans) elde edilene kadar daha fazla eğitim yapmasını sağlar.
-Model 2: Tolerans ayarlamak.
+
+**Model 2:** Tolerans ayarlamak.
 Bu model de aynı şekilde MLP kullanır, ancak tol=1e-4 parametresiyle, optimizasyon algoritmasının tolere edilebilir hata miktarını belirler. Bu, eğitim sırasında modelin ne kadar hatayı kabul edeceğini ayarlar. Daha düşük bir tolerans değeri, daha hassas bir eğitim süreci sağlar.
 
-
-
-Model 3: Early stopping kullanmak.
+**Model 3:** Early stopping kullanmak.
 Bu model de aynı şekilde MLP kullanır, ancak early_stopping=True parametresiyle, eğitim sırasında erken durdurmayı (early stopping) etkinleştirir. Bu, eğitim sırasında modelin performansının artmaya başladığı anda eğitimi durdurarak aşırı uyum (overfitting) riskini azaltır.
 Bu üç model, farklı optimizasyon türlerini kullanarak aynı problemi çözmeye çalışır. İlk model daha uzun süre eğitilirken, ikinci model daha hassas bir eğitim yapar ve üçüncü model aşırı uyum riskini azaltmak için erken durdurma stratejisini kullanır. Bu, farklı eğitim yöntemlerinin performansının karşılaştırılmasını sağlar.
 
-
- 
 Model 1 ve Model 2'nin doğruluk (accuracy), duyarlılık (recall) ve özgüllük (precision) metriklerinin tamamen aynı olması, bu iki modelin aynı performansı sergilediğini gösterir. Bu, tolerans değerini ayarlamakla (Model 2'de kullanılan tol parametresi) modelin performansında belirgin bir değişiklik olmadığını gösterir.
 Model 3'ün doğruluk ve özgüllük metrikleri diğer iki modele kıyasla biraz daha yüksektir. Özellikle, özgüllük metriği (precision) Model 3'te daha yüksektir. Bu, Model 3'ün erken durdurma stratejisini (early stopping) kullanarak daha iyi bir aşırı uyum kontrolü sağladığını ve bu nedenle test verilerinde daha iyi performans gösterdiğini gösterir.
 Sonuç olarak, Model 3, erken durdurma stratejisi kullanarak diğerlerine kıyasla biraz daha iyi performans gösterirken, Model 1 ve Model 2 aynı düzeyde performans sergilemektedir. Bu sonuçlar, farklı model ayarlarının performansı nasıl etkileyebileceğini analiz etmemizi sağlar.
