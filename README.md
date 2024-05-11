@@ -45,6 +45,8 @@ Bu model de aynı şekilde MLP kullanır, ancak tol=1e-4 parametresiyle, optimiz
 Bu model de aynı şekilde MLP kullanır, ancak early_stopping=True parametresiyle, eğitim sırasında erken durdurmayı (early stopping) etkinleştirir. Bu, eğitim sırasında modelin performansının artmaya başladığı anda eğitimi durdurarak aşırı uyum (overfitting) riskini azaltır.
 Bu üç model, farklı optimizasyon türlerini kullanarak aynı problemi çözmeye çalışır. İlk model daha uzun süre eğitilirken, ikinci model daha hassas bir eğitim yapar ve üçüncü model aşırı uyum riskini azaltmak için erken durdurma stratejisini kullanır. Bu, farklı eğitim yöntemlerinin performansının karşılaştırılmasını sağlar.
 
+![image](https://github.com/salihtekin/two_hidden_layer_artificial_neural_network/assets/63247968/4c4e1d18-b562-4803-9210-6fc3b5c877fe)
+
 Model 1 ve Model 2'nin doğruluk (accuracy), duyarlılık (recall) ve özgüllük (precision) metriklerinin tamamen aynı olması, bu iki modelin aynı performansı sergilediğini gösterir. Bu, tolerans değerini ayarlamakla (Model 2'de kullanılan tol parametresi) modelin performansında belirgin bir değişiklik olmadığını gösterir.
 Model 3'ün doğruluk ve özgüllük metrikleri diğer iki modele kıyasla biraz daha yüksektir. Özellikle, özgüllük metriği (precision) Model 3'te daha yüksektir. Bu, Model 3'ün erken durdurma stratejisini (early stopping) kullanarak daha iyi bir aşırı uyum kontrolü sağladığını ve bu nedenle test verilerinde daha iyi performans gösterdiğini gösterir.
 Sonuç olarak, Model 3, erken durdurma stratejisi kullanarak diğerlerine kıyasla biraz daha iyi performans gösterirken, Model 1 ve Model 2 aynı düzeyde performans sergilemektedir. Bu sonuçlar, farklı model ayarlarının performansı nasıl etkileyebileceğini analiz etmemizi sağlar.
